@@ -35,13 +35,27 @@ function lakukanLooping(arrPegawai) {
     TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
       yang berisi jumlah pria dari masing masing pegawai
   */
-  let jumlahPria = null;
+  let jumlahPria = 0;
+  for (let dataJK of arrPegawai){
+    if (dataJK.jenisKelamin === "M"){
+      jumlahPria += 1
+    }
+    console.log(jumlahPria)
+  }
 
   /*
     TODO 3: Buatlah sebuah variabel bernama "jumlahWanita"
       yang berisi jumlah wanita dari masing masing pegawai
   */
-  let jumlahWanita = null;
+  let jumlahWanita = 0;
+  for (let dataJK of arrPegawai){
+    if (dataJK.jenisKelamin === "F"){
+      jumlahWanita += 1
+    }
+    console.log(jumlahWanita)
+  }
+
+  // console.log(`Jumlah Pria = ${jumlahPria} dan Jumlah Wanita = ${jumlahWanita}`)
 
   /*
     TODO 4: Buatlah sebuah variabel bernama "komentar"
@@ -55,6 +69,15 @@ function lakukanLooping(arrPegawai) {
         "Jumlah Pria dan Wanita berimbang"
   */
   let komentar = null;
+  if (jumlahPria > jumlahWanita) {
+    komentar = "Jumlah Pria Lebih Banyak Daripada Jumlah Wanita"
+  }
+  else if (jumlahWanita > jumlahPria){
+    komentar = "Jumlah Wanita Lebih Banyak Daripada Pria"
+  }
+  else if (jumlahPria == jumlahWanita){
+    komentar = "Jumlah Pria dan Wanita Berimbang"
+  }
 
   // ! JANGAN DIMODIFIKASI
   return {
