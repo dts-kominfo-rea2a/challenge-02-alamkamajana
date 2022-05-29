@@ -40,7 +40,7 @@ function lakukanLooping(arrPegawai) {
     if (dataJK.jenisKelamin === "M"){
       jumlahPria += 1
     }
-    console.log(jumlahPria)
+    // console.log(jumlahPria)
   }
 
   /*
@@ -52,7 +52,7 @@ function lakukanLooping(arrPegawai) {
     if (dataJK.jenisKelamin === "F"){
       jumlahWanita += 1
     }
-    console.log(jumlahWanita)
+    // console.log(jumlahWanita)
   }
 
   // console.log(`Jumlah Pria = ${jumlahPria} dan Jumlah Wanita = ${jumlahWanita}`)
@@ -68,7 +68,7 @@ function lakukanLooping(arrPegawai) {
       Apabila imbang, maka komentar akan berisi:
         "Jumlah Pria dan Wanita berimbang"
   */
-  let komentar = null;
+  let komentar = "";
   if (jumlahPria > jumlahWanita) {
     komentar = "Jumlah Pria Lebih Banyak Daripada Jumlah Wanita"
   }
@@ -78,6 +78,7 @@ function lakukanLooping(arrPegawai) {
   else if (jumlahPria == jumlahWanita){
     komentar = "Jumlah Pria dan Wanita Berimbang"
   }
+  console.log(komentar)
 
   // ! JANGAN DIMODIFIKASI
   return {
@@ -90,10 +91,12 @@ function lakukanLooping(arrPegawai) {
 
 function main(data) {
   const hasil = lakukanLooping(data || arrayObjectPegawai);
-
+  total = hasil.jumlahPria + hasil.jumlahWanita
   console.log(hasil.hasilLooping);
   console.log(hasil.jumlahPria);
   console.log(hasil.jumlahWanita);
+  console.log(`Jumlah Pria = ${hasil.jumlahPria} dan Wanita = ${hasil.jumlahWanita} Total = ${total}`);
+  console.log(hasil.komentar);
 
   return hasil;
 }
